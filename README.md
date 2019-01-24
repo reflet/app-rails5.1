@@ -12,9 +12,18 @@
 ## ■ ファイルの配置
 gitコマンドにてファイルを配置します。
 
-```
+```bash
 $ mkdir -p ~/rails5.1 && cd ~/rails5.1
 $ git clone git@github.com:reflet/app-rails5.1.git .
+```
+
+　
+
+## ■ dockerイメージ構築
+下記コマンドでdockerイメージを作成します。
+
+```bash
+$ docker-compose build
 ```
 
 　
@@ -22,7 +31,7 @@ $ git clone git@github.com:reflet/app-rails5.1.git .
 ## ■ コンテナ起動
 下記コマンドでdockerコンテナを起動します。
 
-```
+```bash
 $ docker-compose up -d
 ```
 
@@ -31,8 +40,8 @@ $ docker-compose up -d
 ## 動作確認
 ブラウザでアクセスしてみる。
 
-```ｓｈ
-192.168.99.100
+```bash
+$ open http://192.168.99.100
 ```
 
 　
@@ -40,9 +49,9 @@ $ docker-compose up -d
 ## railsコンテナ操作
 railsについて各種操作が発生した場合は、下記のようにして実行できます。
 
-```
+```bash
 # コマンドのみ実行
-$ docker-compose exec rails {{ コマンド }}
+$ docker-compose exec rails {{コマンド}}
 
 # コンテナへssh接続して操作する
 $ docker exec rails bash
